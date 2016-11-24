@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A12F9031DE7457C000EED99 /* AoAHW3ApplicationDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A12F8E81DE7457C000EED99 /* AoAHW3ApplicationDelegate.cpp */; };
+		5A12F9041DE7457C000EED99 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A12F8EB1DE7457C000EED99 /* Application.cpp */; };
+		5A12F90D1DE75A76000EED99 /* Array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A12F90C1DE75A76000EED99 /* Array.cpp */; };
+		5AB39BC41DE770BE0055869A /* RadixSortStrategy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AB39BC21DE770BE0055869A /* RadixSortStrategy.cpp */; };
+		5AB39BC81DE7A92B0055869A /* DOMElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AB39BC61DE7A92B0055869A /* DOMElement.cpp */; };
 		5AF670FF1DE7324B0092FCCF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AF670FE1DE7324B0092FCCF /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +28,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A12F8E81DE7457C000EED99 /* AoAHW3ApplicationDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AoAHW3ApplicationDelegate.cpp; sourceTree = "<group>"; };
+		5A12F8E91DE7457C000EED99 /* AoAHW3ApplicationDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AoAHW3ApplicationDelegate.hpp; sourceTree = "<group>"; };
+		5A12F8EB1DE7457C000EED99 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		5A12F8EC1DE7457C000EED99 /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
+		5A12F8EE1DE7457C000EED99 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		5A12F8F81DE7457C000EED99 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5A12F90C1DE75A76000EED99 /* Array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Array.cpp; sourceTree = "<group>"; };
+		5AB39BC21DE770BE0055869A /* RadixSortStrategy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RadixSortStrategy.cpp; sourceTree = "<group>"; };
+		5AB39BC31DE770BE0055869A /* RadixSortStrategy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RadixSortStrategy.hpp; sourceTree = "<group>"; };
+		5AB39BC61DE7A92B0055869A /* DOMElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DOMElement.cpp; sourceTree = "<group>"; };
+		5AB39BC71DE7A92B0055869A /* DOMElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DOMElement.hpp; sourceTree = "<group>"; };
 		5AF670FB1DE7324B0092FCCF /* AoAHW3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AoAHW3; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AF670FE1DE7324B0092FCCF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5AF670FE1DE7324B0092FCCF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "/Users/Instigater/Development/AoAHW3/AoAHW3/Supporting Files/main.cpp"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A12F8EA1DE7457C000EED99 /* Bootstrapping */ = {
+			isa = PBXGroup;
+			children = (
+				5A12F8EB1DE7457C000EED99 /* Application.cpp */,
+				5A12F8EC1DE7457C000EED99 /* Application.hpp */,
+			);
+			path = Bootstrapping;
+			sourceTree = "<group>";
+		};
+		5A12F8ED1DE7457C000EED99 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				5A12F8EE1DE7457C000EED99 /* Array.hpp */,
+				5A12F90C1DE75A76000EED99 /* Array.cpp */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		5A12F9011DE7457C000EED99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AF670FE1DE7324B0092FCCF /* main.cpp */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AB39BC11DE770AA0055869A /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				5AB39BC21DE770BE0055869A /* RadixSortStrategy.cpp */,
+				5AB39BC31DE770BE0055869A /* RadixSortStrategy.hpp */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		5AB39BC51DE7A91D0055869A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AB39BC61DE7A92B0055869A /* DOMElement.cpp */,
+				5AB39BC71DE7A92B0055869A /* DOMElement.hpp */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5AF670F21DE7324A0092FCCF = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +117,14 @@
 		5AF670FD1DE7324B0092FCCF /* AoAHW3 */ = {
 			isa = PBXGroup;
 			children = (
-				5AF670FE1DE7324B0092FCCF /* main.cpp */,
+				5A12F8E81DE7457C000EED99 /* AoAHW3ApplicationDelegate.cpp */,
+				5A12F8E91DE7457C000EED99 /* AoAHW3ApplicationDelegate.hpp */,
+				5A12F8F81DE7457C000EED99 /* PrefixHeader.pch */,
+				5AB39BC51DE7A91D0055869A /* Models */,
+				5A12F8EA1DE7457C000EED99 /* Bootstrapping */,
+				5A12F8ED1DE7457C000EED99 /* Containers */,
+				5AB39BC11DE770AA0055869A /* Strategies */,
+				5A12F9011DE7457C000EED99 /* Supporting Files */,
 			);
 			path = AoAHW3;
 			sourceTree = "<group>";
@@ -121,6 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF670FF1DE7324B0092FCCF /* main.cpp in Sources */,
+				5AB39BC41DE770BE0055869A /* RadixSortStrategy.cpp in Sources */,
+				5A12F9031DE7457C000EED99 /* AoAHW3ApplicationDelegate.cpp in Sources */,
+				5AB39BC81DE7A92B0055869A /* DOMElement.cpp in Sources */,
+				5A12F9041DE7457C000EED99 /* Application.cpp in Sources */,
+				5A12F90D1DE75A76000EED99 /* Array.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +321,7 @@
 				5AF671041DE7324B0092FCCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
