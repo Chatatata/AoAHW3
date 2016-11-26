@@ -8,20 +8,23 @@
 
 #pragma once
 
-#include "../Containers/Array.hpp"
-
-using Container::Array;
+#include "../PrefixHeader.pch"
 
 template <typename T>
-class RadixSortStrategy {
+class AlgorithmicSortStrategy;
+
+namespace Container {
+    template <typename T>
+    class Array;
+}
+
+template <typename T>
+class RadixSortStrategy : public AlgorithmicSortStrategy<T> {
 public:
-    RadixSortStrategy(const Array<T> &array);
+    RadixSortStrategy(const Container::Array<T> &array);
     
-    void sort() noexcept;
-    const Array<T> &getArray() const noexcept;
+    void sort() noexcept override;
     
 private:
-    Array<T> array;
-    
     void countSort(UInt64 exponent);
 };

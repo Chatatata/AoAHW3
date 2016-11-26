@@ -16,6 +16,8 @@ namespace Container {
     template <typename T>
     class Array {
     public:
+        static const UInt64 initialLength = 1000005;
+        
         Array();
         Array(const Array &other);
         Array &operator = (const Array &other);

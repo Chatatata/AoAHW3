@@ -10,27 +10,23 @@
 
 #include <cstring>
 
-using Container::Array;
-
-static const UInt64 initialLength = 1000005;
-
 template <typename T>
-Array<T>::Array()
+Container::Array<T>::Array()
 : data(new T[initialLength]()), length(0)
 {
     //  Blank implementation
 }
 
 template <typename T>
-Array<T>::Array(const Array &other)
+Container::Array<T>::Array(const Array &other)
 : data(new T[initialLength]()), length(other.length)
 {
     std::memcpy(this->data, other.data, sizeof(T) * other.length);
 }
 
 template <typename T>
-Array<T> &
-Array<T>::operator = (const Array &other)
+Container::Array<T> &
+Container::Array<T>::operator = (const Array &other)
 {
     if (this != &other) {
         for (UInt64 i = 0; i < other.length; ++i) {
@@ -48,7 +44,7 @@ Array<T>::operator = (const Array &other)
 template <typename T>
 inline
 T &
-Array<T>::objectAtIndex(const UInt64 index) const
+Container::Array<T>::objectAtIndex(const UInt64 index) const
 {
     return data[index];
 }
@@ -56,7 +52,7 @@ Array<T>::objectAtIndex(const UInt64 index) const
 template <typename T>
 inline
 T &
-Array<T>::operator [] (const UInt64 index) const
+Container::Array<T>::operator [] (const UInt64 index) const
 {
     return objectAtIndex(index);
 }
@@ -64,7 +60,7 @@ Array<T>::operator [] (const UInt64 index) const
 template <typename T>
 inline
 void
-Array<T>::append(const T &object) noexcept
+Container::Array<T>::append(const T &object) noexcept
 {
     data[length] = object;
     
@@ -74,7 +70,7 @@ Array<T>::append(const T &object) noexcept
 template <typename T>
 inline
 UInt64
-Array<T>::getLength() const noexcept
+Container::Array<T>::getLength() const noexcept
 {
     return length;
 }
@@ -82,7 +78,7 @@ Array<T>::getLength() const noexcept
 template <typename T>
 inline
 void
-Array<T>::setLength(const UInt64 length) noexcept
+Container::Array<T>::setLength(const UInt64 length) noexcept
 {
     this->length = length;
 }

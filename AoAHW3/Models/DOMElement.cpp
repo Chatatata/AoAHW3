@@ -31,6 +31,12 @@ DOMElement::operator = (const DOMElement &other)
     return *this;
 }
 
+Boolean
+DOMElement::operator < (const DOMElement &other) const noexcept
+{
+    return this->data < other.data;
+}
+
 DOMElement::operator UInt64() const noexcept
 {
     return data;

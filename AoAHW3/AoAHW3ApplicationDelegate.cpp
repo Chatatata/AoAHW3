@@ -17,17 +17,53 @@
 
 #include <fstream>
 
-#include "Strategies/RadixSortStrategy.cpp"
+//#include "Strategies/RadixSortStrategy.cpp"
 #include "Models/DOMElement.hpp"
 
-using StringStream = std::stringstream;
+#include "Strategies/HeapSortStrategy.cpp"
 
 UInt16
 AoAHW3ApplicationDelegate::applicationDidStart(const Container::Array<String> &arguments) const noexcept
 {
+//    using StringStream = std::stringstream;
+//    using InputFileStream = std::ifstream;
+//    using OutputFileStream = std::ofstream;
+//    using Container::Array;
+//    
+//    Array<DOMElement> array;
+//    
+//    InputFileStream inputFile("numbers_to_sort.txt");
+//    OutputFileStream outputFile("sorted_numbers.txt");
+//    String feed;
+//    
+//    for (UInt64 i = 0; !inputFile.eof(); ++i) {
+//        inputFile >> feed;
+//        inputFile >> feed;
+//        
+//        array.append(DOMElement(i, std::stoll(feed)));
+//    }
+//    
+//    RadixSortStrategy<DOMElement> rss(array);
+//    
+//    rss.sort();
+//    
+//    for (UInt64 i = 0; i < rss.getArray().getLength(); ++i) {
+//        outputFile
+//        << rss.getArray()[i].index
+//        << "\t"
+//        << rss.getArray()[i].data
+//        << std::endl;
+//    }
+    
+    using StringStream = std::stringstream;
+    using InputFileStream = std::ifstream;
+    using OutputFileStream = std::ofstream;
+    using Container::Array;
+    
     Array<DOMElement> array;
     
-    std::ifstream inputFile("numbers_to_sort.txt");
+    InputFileStream inputFile("ClanA.txt");
+    OutputFileStream outputFile("sorted_numbers.txt");
     String feed;
     
     for (UInt64 i = 0; !inputFile.eof(); ++i) {
@@ -37,11 +73,39 @@ AoAHW3ApplicationDelegate::applicationDidStart(const Container::Array<String> &a
         array.append(DOMElement(i, std::stoll(feed)));
     }
     
-    RadixSortStrategy<DOMElement> rss(array);
+    HeapSortStrategy<DOMElement> hss(array);
     
-    rss.sort();
+    hss.sort();
     
-    for (UInt64 i = 0; i < rss.getArray().getLength(); ++i) printf("%llu\t%llu\n", rss.getArray()[i].index, rss.getArray()[i].data);
+    for (UInt64 i = 0; i < hss.getArray().getLength() - 1; ++i) {
+        assert(hss.getArray()[i] >= hss.getArray()[i + 1]);
+//        
+//        std::cout
+//        << hss.getArray()[i].index
+//        << "\t"
+//        << hss.getArray()[i].data
+//        << std::endl;
+    }
     
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
