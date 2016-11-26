@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "PrefixHeader.pch"
+#include "../PrefixHeader.pch"
 
 template <typename T>
 class AlgorithmicSortStrategy;

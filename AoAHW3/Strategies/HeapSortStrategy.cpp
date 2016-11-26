@@ -10,7 +10,7 @@
 
 #include <algorithm>
 
-#include "AlgorithmicSortStrategy.cpp"
+#include "AlgorithmicSortStrategy.hpp"
 
 template <typename T>
 HeapSortStrategy<T>::HeapSortStrategy(const Container::Array<T> &array)
