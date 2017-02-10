@@ -1,7 +1,7 @@
-# AoAHW3
-Analysis of Algorithms, Assignment 3.
+# AoAHW3_1
+Analysis of Algorithms, Assignment 3, Part 1.
 
-Implements bare-bones radis sort. Needs further optimization efforts to
+Implements bare-bones radix sort. Needs further optimization efforts to
 make it production-grade.
 
 Pull requests will be gladly accepted, if you have suggestions.
